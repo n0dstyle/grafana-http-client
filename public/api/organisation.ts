@@ -7,7 +7,7 @@ import IUserModel from './models/user/userModel';
 export default class Organisation extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     getCurrentOrganisation(): Promise<any> {

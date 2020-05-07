@@ -9,7 +9,7 @@ import IPermissionModel from './models/permissions/permissionsModel';
 export default class FolderPermissions extends GrafanaHTTPApi {
     constructor(baseURL?: string, authKey?: IApiBearerAuth, basicAuth?: IBasicAuth) {
         // TODO: add basic authentication
-        super(baseURL);
+        super(baseURL, authKey, basicAuth);
     }
 
     getFolderPermissions(uid: number) {
